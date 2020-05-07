@@ -1,6 +1,7 @@
 *{
     margin: 0; 
     padding: 0; 
+    scroll-behavior: smooth;
 }
 
 body{
@@ -11,6 +12,31 @@ body{
     height: 100vh;
     scroll-behavior: smooth;
 }
+
+.left{
+    float:left; 
+    width: 8%;
+    height: 100vh;
+    background-color: #244c59;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: -1;
+    border-right: solid 2px white;
+}
+
+.right{
+    float:right; 
+    width: 8%;
+    height: 100vh;
+    background-color: #244c59;
+    top: 0;
+    right: 0; 
+    position: fixed;
+    z-index: -1;
+    border-left: solid 2px white;
+}
+
 
 .navbar{
     color: white;
@@ -23,6 +49,106 @@ body{
 .page-nav{
     text-align: center;
     font-size: 36px;
-    text-decoration: none;
+}
+.mission-slide{
+    text-align: center;
+}
+.WWD-slide, .mission-slide, .identification-slide{
+    display: none;
+}
+.arrows{
+    display:none;
+    animation-name: pointing;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+
 }
 
+.swipe{
+    font-size: xx-large;
+    display: none;
+}
+
+@media only screen and (max-width: 768px){
+    .swipe{
+        display: block ;
+    }
+    .identification-slide{
+        display: block;
+    }
+    .images{
+        display: none;
+    }
+    .left, .right{
+        display: none;
+    }
+    .identification h1{
+        font-size: 46px;
+    }
+
+    .mission-container p, .identification p{
+        font-size: 16px;
+        text-align: center;
+        padding-top: 24px;
+    }
+
+    .WWD-slide{
+        display: block;
+    }
+
+    .what-we-do{
+        padding-top: 50%;
+        text-align: center;
+    }
+    .what-we-do h1{
+        font-size: 46px;
+    }
+
+    .identification{
+        width: 100%;
+        height: 100vh;
+    }
+
+    .intro-slide{
+        margin-top: 45%;
+        margin-bottom: 85%;
+    }
+    .mission-slide{
+        display: block;
+    }
+    .mission-container h1{
+        font-size: 46px;
+    }
+    .arrows{
+        display: block;
+    }
+
+    .arrow-1{
+        animation-name: pointing;
+        animation-duration: infinite;
+    }
+    .arrow-2{
+        animation-name: pointing;
+        animation-duration: infinite;
+        animation-delay: 2s;
+    }
+    .arrow-3{
+        animation-name: pointing;
+        animation-duration: infinite;
+        animation-delay: 3s;
+    }
+}
+
+@keyframes pointing{
+    0%{
+        filter: brightness(30%)
+    } 
+ 
+    50%{
+        filter: brightness(100%)
+    }
+
+    100%{
+        filter: brightness(30%)
+    }
+}
