@@ -1,18 +1,20 @@
 *{
     margin: 0; 
     padding: 0; 
-    scroll-behavior: smooth;
+    font-family: 'Varela Round', sans-serif;
 }
 
 body{
-    font-family: 'Quicksand', sans-serif;
+    
     background-color: #09152B;
     color:white;
     width: 100%;
     height: 100vh;
-    scroll-behavior: smooth;
 }
 
+p{
+    font-size: 24px;
+}
 .left{
     float:left; 
     width: 8%;
@@ -58,10 +60,24 @@ body{
 }
 .arrows{
     display:none;
+}
+.arrow1{
     animation-name: pointing;
     animation-duration: 3s;
     animation-iteration-count: infinite;
-
+    
+}
+.arrow2{
+    animation-name: pointing;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-delay: 1s;
+}
+.arrow3{
+    animation-name: pointing;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
 }
 
 .swipe{
@@ -69,7 +85,60 @@ body{
     display: none;
 }
 
+
+
+@media only screen and (max-width: 1360px){
+    .left, .right{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1960px){
+    .col-4{
+        max-width: 500px;
+        
+    }
+    .container{
+        justify-content: center;
+    }
+    *{
+        text-align: center;
+    }
+    
+    p{
+        font-size: 36px;
+        padding: 50px;
+    }
+
+    .intro-container{
+        margin-bottom: 25%;
+    }
+
+    .identification-para{
+        padding: 25px;
+    }
+    .identification{
+        padding-top: 5%;
+        margin-bottom:25%;
+    }
+    
+    .what-we-do{
+        padding-top: 5%;
+        margin-bottom:25%;
+    }
+    .mission-container{
+        padding-top: 5%;
+        margin-bottom:25%;
+    }
+    
+}
+
+
 @media only screen and (max-width: 768px){
+    .heading p{
+        font-size: 16px;
+        text-align: center;
+    }
     .swipe{
         display: block ;
     }
@@ -79,14 +148,12 @@ body{
     .images{
         display: none;
     }
-    .left, .right{
-        display: none;
-    }
+
     .identification h1{
         font-size: 46px;
     }
 
-    .mission-container p, .identification p{
+    .mission-container p, .identification p, .what-we-do p{
         font-size: 16px;
         text-align: center;
         padding-top: 24px;
@@ -130,18 +197,18 @@ body{
     .arrow-2{
         animation-name: pointing;
         animation-duration: infinite;
-        animation-delay: 2s;
+        animation-delay: .125s;
     }
     .arrow-3{
         animation-name: pointing;
         animation-duration: infinite;
-        animation-delay: 3s;
+        animation-delay: .25s;
     }
 }
 
 @keyframes pointing{
     0%{
-        filter: brightness(30%)
+        filter: brightness(20%)
     } 
  
     50%{
@@ -149,6 +216,7 @@ body{
     }
 
     100%{
-        filter: brightness(30%)
+        filter: brightness(20%)
     }
 }
+
