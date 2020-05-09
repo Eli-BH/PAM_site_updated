@@ -1,0 +1,53 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+body{
+    color: white;
+    background-color: #09152B;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.left{
+    float:left; 
+    width: 8%;
+    height: 100vh;
+    background-color: #244c59;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: -1;
+    border-right: solid 2px white;
+}
+
+.right{
+    float:right; 
+    width: 8%;
+    height: 100vh;
+    background-color: #244c59;
+    top: 0;
+    right: 0; 
+    position: fixed;
+    z-index: -1;
+    border-left: solid 2px white;
+}
+
+p{  
+    text-align: center;
+    font-size: 48px;
+}
+
+
+@media only screen and (max-width: 1360px){
+    .left, .right{
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 768px){
+    p{
+        font-size: 24px;
+    }
+}
